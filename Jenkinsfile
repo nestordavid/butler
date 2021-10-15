@@ -6,7 +6,8 @@ pipeline {
         stage('Buzz Build') {
           steps {
             echo 'Hello'
-            sh './jenkins/build.sh'
+            sh './Users/apple/.jenkins/build.sh'
+            // sh './jenkins/build.sh'
           }
         }
 
