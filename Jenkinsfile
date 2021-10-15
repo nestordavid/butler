@@ -3,22 +3,16 @@ pipeline {
   stages {
     stage('Buzz buzz') {
       parallel {
-        stage('Buzz buzz') {
+        stage('Buzz Build') {
           steps {
             echo 'Hello'
+            sh './jenkins/build.sh'
           }
         }
 
-        stage('Fluffy Test') {
+        stage('Buzz Test') {
           steps {
-            sleep 5
-            sh 'echo Success!'
-          }
-        }
-
-        stage('Fluffy Build') {
-          steps {
-            sh 'echo Another Placeholder'
+            sh './jenkins/test-all.sh'
           }
         }
 
