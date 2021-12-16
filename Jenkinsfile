@@ -6,14 +6,14 @@ pipeline {
         stage('Buzz Build') {
           steps {
             echo 'Hello'
-            sh './Users/apple/.jenkins/build.sh'
+            sh '/home/david/Documents/build.sh'
             // sh './jenkins/build.sh'
           }
         }
 
         stage('Buzz Test') {
           steps {
-            sh './jenkins/test-all.sh'
+            sh '/home/david/Documents/test-all.sh'
           }
         }
 
